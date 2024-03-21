@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="commonstyles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <script defer src="./humantoepoch.js"></script>
+  <title>Human Date to Epoch Date</title>
+</head>
+<body>
+  <div class="non-footer">
+    <header class="navbar">
+        <div class="dropdown-nav" ><img id="hamburger" style="margin-top: 14px;" src ="Images/menu-24px.svg">
+          <div class="dropdown-content" >
+            <a href="https://string-util.netlify.app" target="_blank">String Utilities</a>
+            <a href="https://unit-converter-gvsn.netlify.app" target="_blank" >Unit Converter</a>
+            <a href="https://number-base-converet.netlify.app" target="_blank">Base Converter</a>
+            <a href="https://colou-util.netlify.app" target="_blank">Color Converter</a>
+            <a href="https://encoder-decoder-app.netlify.app" target="_blank">Encoder/Decoder</a>  
+          </div>
+          </div>  
+  
+          <div class="dropdown-nav">Time Converter <span><img class="dropdown-arrow" src="Images/down-arrow.svg"></span>
+            <div class="dropdown-content">
+              <a href="index.html">Epoch to Human</a>
+              <a href="#">Human to Epoch</a>
+            </div>
+            </div>
+  
+          <div class="util"><a style="color:rgb(77, 80, 83);text-decoration: none;" href="https://util-app-dashboard.netlify.app/" target="_blank">Utility<span style="background-color: rgb(39, 110, 241);color:white;border-radius: 50%;">@</span>pps</a></div>
+             
+      </header>       
+    </header>
+  <main>
+    <h2 style="text-align: center;">Digital Time</h2>
+    <div class="time-box" >
+      <code>
+    <div style="margin-bottom: 10px;">
+      <label for="current-epoch">Current Epoch Time: </label>
+      <span id="current-epoch"></span> seconds
+    </div>
+
+    <div>
+      <label for="local-time">Current Time: </label>
+      <span id="local-time"></span>
+    </div>
+   
+  </code>
+  </div>
+
+    
+    <h2 style="text-align: center;">Human time to Epoch Converter</h2>
+    <div class="input-output">
+    <div style="margin-bottom:20px;">
+    <label for="year-input">Year: </label>
+    <input style="margin-left:20px;" type="text" id="year-input" placeholder="yyyy" ></input>
+  </div>
+  <div style="margin-bottom:20px;">
+    <label for="month-input">Month: </label>
+    <input style="margin-left:5px;" type="text" id="month-input" placeholder="MM"></input>
+  </div>
+  <div style="margin-bottom:20px;">
+    <label for="date-input">Date: </label>
+    <input style="margin-left:20px;" type="text" id="date-input" placeholder="dd"></input>
+  </div>
+  <div style="margin-bottom:20px;">
+    <label for="hour-input">Hour: </label>
+    <input style="margin-left:20px;" type="text" id="hour-input" placeholder="HH"></input>
+  </div>
+  <div style="margin-bottom:20px;">
+    <label for="minute-input">Minute: </label>
+    <input style="margin-left:5px;" type="text" id="minute-input" placeholder="mm"></input>
+  </div>
+  <div style="margin-bottom:20px;">
+    <label for="second-input">Second: </label>
+    <input style="margin-left:2px;" type="text" id="second-input" placeholder="ss"></input>
+  </div>
+  <div style="margin-bottom:20px;">
+    <input type="button" id="convert-button" value= "Convert">
+    <input type="button" id="reset-button" value= "Reset">
+  </div>
+  <div >
+    <label for="epoch-output">Epoch value: </label>
+    <input style="margin-left:5px;" type="text" id="epoch-output" placeholder="1611041516" readonly></input>
+  </div>
+</div>
+  </main>
+  <section>
+    <div class="content-info" style="text-align: justify;">
+    <h3 style="padding-top: 10px;text-align: center;">What is epoch time?</h3>
+    <p>The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of seconds that have elapsed since January 1, 1970 
+      (midnight UTC/GMT), not counting leap seconds 
+      (in ISO 8601: 1970-01-01T00:00:00Z). Literally speaking the 
+      epoch is Unix time 0 (midnight 1/1/1970), but 'epoch' is often 
+      used as a synonym for Unix time. Some systems store epoch dates 
+      as a signed 32-bit integer, which might cause problems on 
+      January 19, 2038 (known as the Year 2038 problem or Y2038). 
+      The converter on this page converts readable dates to timestamps in 
+      milliseconds (13-digit).</p>
+      <p>Unix time is widely used in operating systems and file formats. 
+        In Unix-like operating systems, date is a command which will print or 
+        set the current time; by default, it prints or sets the time in the 
+        system time zone, but with the -u flag, it prints or sets the time in UTC
+         and, with the TZ environment variable set to refer to a 
+         particular time zone, prints or sets the time in that time zone.</p>
+     <p>You can check out more about it 
+       <a style="color:#388bfd;" href ="https://en.wikipedia.org/wiki/Unix_time" target="_blank">here.</a></p>
+      </div> 
+    </section>
+  
+</div>
+
+<div class="footer-wrapper">
+  <footer style="background-color:#24292e;">
+    <div class="footer-info" style="text-align: center;color:white;">
+      <p style="padding-top: 10px;">Check out my profiles here:</p>
+       <div class="footer-logo" >
+         <a href="https://www.linkedin.com/in/gvsn138/" target="_blank"><img src="Images/linkedin.svg"></a>
+         <a style="margin-left: 10px;margin-right: 10px;" href="https://github.com/gvsn138" target="_blank"><img src="Images/github.svg"></a>
+         <a href="https://twitter.com/gvsn138" target="_blank"><img src="Images/twitter.svg"></a>
+        </div>
+    </div>
+  </footer>
+  </div>
+
+  
+</body>
+</html>
